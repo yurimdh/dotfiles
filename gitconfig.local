@@ -1,0 +1,35 @@
+[user]
+  email = willian@willianfernandes.com.br
+  name = Willian Fernandes
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[color "diff"]
+  plain = white
+  meta = white
+  frag = cyan reverse
+  old = red
+  new = green
+  commit = yellow
+  whitespace = normal red
+[alias]
+  b = branch
+  cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+  dw = diff --word-diff
+  fl = log -p
+  lg = log --oneline --decorate
+  sb = status -sb
+  sh = !git-sh
+  who = shortlog -s --
+[core]
+  editor = vim
+[help]
+  autosetupmerge = true
+  autocorrect = 1
+[branch]
+  autosetuprebase = always
+[push]
+  default = current
+[github]
+  user = willian
