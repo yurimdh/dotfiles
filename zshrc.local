@@ -1,1 +1,2 @@
 [[ -f ~/.zsh.local/inputrc ]] && source ~/.zsh.local/inputrc
+[[ -f ~/.zsh.local/export ]] && source ~/.zsh.local/export
