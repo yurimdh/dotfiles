@@ -6,7 +6,9 @@ let mapleader = "\\"
 " ****************************************************
 " Shares the clipboard with OS X
 " ****************************************************
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard=unnamed
+endif
 
 " ****************************************************
 " Removing some default confs
