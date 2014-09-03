@@ -1,19 +1,59 @@
 setopt prompt_subst
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' stagedstr '-'
-zstyle ':vcs_info:*' unstagedstr '↕'
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-zstyle ':vcs_info:*' formats \
-  '%F{5}[%F{2}%b%F{5}] %F{2}%c%F{3}%u%f'
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-zstyle ':vcs_info:*' enable git
-+vi-git-untracked() {
+zstyle ':vcs_info:*' stagedstr     '%F{10}-%f'
+zstyle ':vcs_info:*' unstagedstr   '%B%F{1}▪︎%f%b'
+zstyle ':vcs_info:*' formats       '%F{255}%b%f %u%c%m '
+zstyle ':vcs_info:*' actionformats '%F{255}%b%f %u%c%m %B%s-%a%%b '
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-aheadbehind
+
+### git: Show marker (T) if there are untracked files in repository
+# Make sure you have added staged to your 'formats':  %c
+function +vi-git-untracked(){
   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-    git status --porcelain | grep '??' &> /dev/null ; then
-    hook_com[unstaged]+='%F{1}%f'
+    git status --porcelain | fgrep '??' &> /dev/null ; then
+    # This will show the marker if there are any untracked files in repo.
+    # If instead you want to show the marker only if there are untracked
+    # files in $PWD, use:
+    #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
+    hook_com[unstaged]+='%F{3}*%f'
   fi
 }
 
-precmd () { vcs_info }
-PROMPT='%F{5}[%F{2}%n%F{5}] %F{3}%3~ ${vcs_info_msg_0_} %f%# '
+### git: Show +N/-N when your local branch is ahead-of or behind remote HEAD.
+# Make sure you have added misc to your 'formats':  %m
+function +vi-git-aheadbehind() {
+  local ahead behind
+  local -a gitstatus
+
+  # for git prior to 1.7
+  # ahead=$(git rev-list origin/${hook_com[branch]}..HEAD | wc -l)
+  ahead=$(git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null | wc -l | tr -d ' ')
+  (( $ahead )) && gitstatus+=( "%F{1}↑%f" )
+
+  # for git prior to 1.7
+  # behind=$(git rev-list HEAD..origin/${hook_com[branch]} | wc -l)
+  behind=$(git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null | wc -l | tr -d ' ')
+  (( $behind )) && gitstatus+=( "%F{1}↓%f" )
+
+  hook_com[misc]+=${(j::)gitstatus}
+}
+
+__ruby_prompt() {
+  local RUBY_VERSION=`ruby -e "puts RUBY_VERSION"`
+  if [ -f Gemfile.lock ]; then
+    local RAILS_VERSION=`cat Gemfile.lock | grep -E " +rails \([0-9]+" | sed 's/ *rails (\(.*\))/\1/'`
+  fi
+
+  if [ "$RAILS_VERSION" != "" ]; then
+    local RAILS_PROMPT="${RAILS_VERSION}#"
+  fi
+
+  echo "%F{8}[${RAILS_PROMPT}${RUBY_VERSION}]"
+}
+
+precmd () {
+  vcs_info
+  PS1="%F{12}[%n] $(__ruby_prompt) %F{3}%3~ ${vcs_info_msg_0_}
+%f$ "
+}
