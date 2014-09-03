@@ -1,3 +1,8 @@
 [[ -f ~/.zsh.local/inputrc ]] && source ~/.zsh.local/inputrc
 [[ -f ~/.zsh.local/export ]] && source ~/.zsh.local/export
 [[ -f ~/.zsh.local/prompt ]] && source ~/.zsh.local/prompt
+
+# Go to /vagrant it it's a Vagrant VM
+if [ -d /vagrant ]; then
+  cd /vagrant
+fi
