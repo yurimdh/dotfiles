@@ -1,0 +1,36 @@
+alias ack='ag'
+alias amend='git commit --amend'
+alias be='bundle exec'
+alias bu='bundle update'
+alias fs='foreman start'
+alias -g G='| grep'
+alias gp='git push'
+alias gpr='git pull --rebase'
+alias grc='git rebase --continue'
+alias hpr='hub pull-request'
+alias hpush='git push heroku'
+alias irb='irb --readline -r irb/completion'
+alias killruby='killall -9 ruby'
+alias rc='rails console'
+alias ss='spring stop'
+alias tail-logs='heroku logs -t'
+alias track='git checkout -t'
+alias v='vim'
+alias vi='vim'
+
+# Heroku staging
+alias staging-console='heroku run console --remote staging'
+alias staging-tail='heroku logs --tail --remote staging'
+
+# Heroku production
+alias production-console='heroku run console --remote production'
+alias production-tail='heroku logs --tail --remote production'
+
+# # Heroku databases
+
+alias db-pull-staging='development restore staging'
+alias db-pull-production='development restore production'
+
+alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
+alias db-backup-production='heroku pgbackups:capture --remote production'
+alias db-backups='heroku pgbackups --remote production'
