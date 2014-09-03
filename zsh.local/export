@@ -1,1 +1,2 @@
-export CDPATH=.:~:~/Projects:~/Projects/TopTal:~/GitHub:~/VMs
+export CDPATH=.:~:~/Projects:~/Projects/TopTal:~/GitHub
+export LC_ALL="$LANG"
