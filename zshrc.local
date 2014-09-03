@@ -1,5 +1,6 @@
-[[ -f ~/.zsh.local/inputrc ]] && source ~/.zsh.local/inputrc
 [[ -f ~/.zsh.local/export ]] && source ~/.zsh.local/export
+[[ -f ~/.zsh.local/functions ]] && source ~/.zsh.local/functions
+[[ -f ~/.zsh.local/inputrc ]] && source ~/.zsh.local/inputrc
 [[ -f ~/.zsh.local/prompt ]] && source ~/.zsh.local/prompt
 
 # Go to /vagrant it it's a Vagrant VM
