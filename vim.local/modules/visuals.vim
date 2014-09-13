@@ -9,8 +9,7 @@ augroup END
 " ****************************************************************
 " COLORS AND SYNTAX
 " ****************************************************************
-set background=dark
-colorscheme jellybeans
+colorscheme envylabs
 filetype plugin indent on
 syntax on
 
