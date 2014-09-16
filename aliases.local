@@ -1,9 +1,10 @@
+alias -g G='| grep'
 alias ack='ag'
 alias amend='git commit --amend'
 alias be='bundle exec'
 alias bu='bundle update'
+alias fr='foreman run'
 alias fs='foreman start'
-alias -g G='| grep'
 alias gp='git push'
 alias gpr='git pull --rebase'
 alias grc='git rebase --continue'
@@ -28,9 +29,9 @@ alias production-tail='heroku logs --tail --remote production'
 
 # # Heroku databases
 
-alias db-pull-staging='development restore staging'
 alias db-pull-production='development restore production'
+alias db-pull-staging='development restore staging'
 
-alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
 alias db-backup-production='heroku pgbackups:capture --remote production'
 alias db-backups='heroku pgbackups --remote production'
+alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
