@@ -1,7 +1,8 @@
 " ****************************************************************
 " TRAILING SPACE REMOVER
 " ****************************************************************
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * if &ft != 'slim' | :%s/\s\+$//e | endif
 
 " ****************************************************************
 " USEFUL VIM CONFS
