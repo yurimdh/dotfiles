@@ -1,10 +1,34 @@
 " ****************************************************
 " Adding custom commands to rails.vim
 " ****************************************************
-autocmd User Rails Rnavcommand admin app/admin -default=model()
-autocmd User Rails Rnavcommand factory spec/factories -glob=**/* -suffix=.rb -default=factories
-autocmd User Rails Rnavcommand presenter app/presenters -suffix=_presenter.rb -default=model()
-autocmd User Rails Rnavcommand seeds db/ -default=seeds
-autocmd User Rails Rnavcommand uploader app/uploaders -suffix=_uploader.rb -default=model()
-autocmd User Rails Rnavcommand worker app/workers -default=model()
-autocmd User Rails Rnavcommand service app/services -default=model()
+let g:rails_projections = {
+  \ "app/admin/*.rb": { "command": "admin" },
+  \ "app/presenters/*_presenter.rb": {
+  \   "command": "presenter",
+  \   "test": [
+  \     "test/presenters/%s_presenter_test.rb",
+  \     "spec/presenters/%s_presenter_spec.rb"
+  \   ]
+  \ },
+  \ "app/uploaders/*_uploader.rb": { "command": "uploader" },
+  \ "app/workers/*_worker.rb": {
+  \   "command": "worker",
+  \   "test": [
+  \     "test/workers/%s_worker_test.rb",
+  \     "spec/workers/%s_worker_spec.rb"
+  \   ]
+  \ },
+  \ "app/services/*_service.rb": {
+  \   "command": "service",
+  \   "test": [
+  \     "test/services/%s_service_test.rb",
+  \     "spec/services/%s_service_spec.rb"
+  \   ]
+  \ },
+  \ "app/serializers/*_serializer.rb": { "command": "serializer" },
+  \ "app/indexes/*_index.rb": { "command": "index" },
+  \ "config/routes.rb": { "command": "config" },
+  \ "config/routes/*.rb": { "command": "config" },
+  \ "db/seeds.rb": { "command": "seeds" },
+  \ "spec/factories.rb": { "command": "factories" },
+  \ "spec/factories/*.rb": { "command": "factories" } }
