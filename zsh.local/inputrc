@@ -1,3 +1,6 @@
+# Turn off vi mode
+bindkey -e
+
 # Enable seaching with up and down arrows
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
