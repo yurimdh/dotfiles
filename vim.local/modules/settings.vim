@@ -48,3 +48,8 @@ set noswapfile                                  " Don't create annoying *.swp fi
 " Clear highlighted searches
 " ****************************************************
 nmap <silent> <leader>/ :nohlsearch<CR>
+
+" ****************************************************
+" Cancelling autocomplete by pressing Tab key
+" ****************************************************
+iunmap <Tab>
