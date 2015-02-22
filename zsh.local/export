@@ -1,6 +1,6 @@
 export CDPATH=.:~:~/Projects:~/Projects/TopTal:~/GitHub:/vagrant
 export LC_ALL="$LANG"
-export PATH="$HOME/.rbenv/bin:./bin:$HOME/local/node/npm/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:./bin:$HOME/local/node/npm/bin:/usr/local/sbin:$PATH"
 
 # load rbenv if available
 if which rbenv &>/dev/null ; then
