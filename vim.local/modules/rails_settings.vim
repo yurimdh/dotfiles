@@ -37,5 +37,6 @@ let g:rails_projections = {
   \ "config/routes.rb": { "command": "config" },
   \ "config/routes/*.rb": { "command": "config" },
   \ "db/seeds.rb": { "command": "seeds" },
+  \ "spec/support/factories.rb": { "command": "factories" },
   \ "spec/factories.rb": { "command": "factories" },
   \ "spec/factories/*.rb": { "command": "factories" } }
