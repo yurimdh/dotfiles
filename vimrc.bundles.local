@@ -1,5 +1,6 @@
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Raimondi/delimitMate'
+Plug 'alexlafroscia/vim-ember-cli'
 Plug 'claco/jasmine.vim'
 Plug 'duff/vim-bufonly'
 Plug 'editorconfig/editorconfig-vim'
