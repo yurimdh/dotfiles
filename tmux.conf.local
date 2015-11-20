@@ -1,3 +1,6 @@
+# Locas OSX config
+if-shell "[ -f ~/.tmux.conf.local ]" 'source ~/.tmux-osx.conf.local'
+
 # reload settings
 bind-key R source-file ~/.tmux.conf
 
