@@ -6,8 +6,8 @@
   status = auto
   branch = auto
 [color "diff"]
-  plain = white
-  meta = white
+  plain = normal
+  meta = cyan
   frag = cyan reverse
   old = red
   new = green
