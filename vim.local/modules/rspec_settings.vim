@@ -2,6 +2,8 @@
 " vim-rspec mappings
 """""""""""""""""""""""""""""""
 let g:rspec_command = 'w | Dispatch rspec {spec}'
+let g:mocha_js_command = "w | Dispatch npm test {spec}"
+
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>

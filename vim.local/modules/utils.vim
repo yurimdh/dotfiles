@@ -2,7 +2,7 @@
 " TRAILING SPACE REMOVER
 " ****************************************************************
 " autocmd BufWritePre * :%s/\s\+$//e
-autocmd BufWritePre * if &ft != 'slim' | :%s/\s\+$//e | endif
+autocmd BufWritePre * if &ft != 'slim' && &ft != 'markdown' | :%s/\s\+$//e | endif
 
 " ****************************************************************
 " USEFUL VIM CONFS
