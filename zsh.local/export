@@ -1,11 +1,19 @@
 export CDPATH=.:~:~/Projects:~/Projects/PrintBear:~/Projects/Toptal:~/GitHub:/vagrant
 export LC_ALL="$LANG"
-export PATH="$HOME/.rbenv/bin:./bin:$HOME/local/node/npm/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.rbenv/bin:./bin:$HOME/local/node/npm/bin:/usr/local/sbin:/Applications/VMware Fusion.app/Contents/Library:$PATH"
 
 if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash zsh)"
 fi
 
-if [[ `VBoxManage list runningvms` =~ default ]] && which docker-machine &>/dev/null ; then
-  eval "$(docker-machine env default --shell=zsh)"
+if which VBoxManage &>/dev/null ; then
+  if [[ `VBoxManage list runningvms` =~ default ]] && which docker-machine &>/dev/null ; then
+    eval "$(docker-machine env default --shell=zsh)"
+  fi
+fi
+
+if which vmrun &>/dev/null ; then
+  if [[ `vmrun list` =~ default ]] && which docker-machine &>/dev/null ; then
+    eval "$(docker-machine env default --shell=zsh)"
+  fi
 fi
