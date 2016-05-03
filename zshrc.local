@@ -2,6 +2,7 @@
 [[ -f ~/.zsh.local/functions ]] && source ~/.zsh.local/functions
 [[ -f ~/.zsh.local/inputrc ]] && source ~/.zsh.local/inputrc
 [[ -f ~/.zsh.local/prompt ]] && source ~/.zsh.local/prompt
+[[ -f ~/.zsh.local/tmuxinator.zsh ]] && source ~/.zsh.local/tmuxinator.zsh
 
 # Go to /vagrant it it's a Vagrant VM
 if [ -d /vagrant ]; then
