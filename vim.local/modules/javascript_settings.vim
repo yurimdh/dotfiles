@@ -27,3 +27,13 @@ function! RunJavaScriptFile(...)
 endfunction
 
 map <leader>js :call RunJavaScriptFile()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JSX Sintax highloghting
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:jsx_ext_required = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic Checker
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_javascript_checkers = ['standard']
