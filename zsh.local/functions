@@ -45,3 +45,11 @@ function take {
 function gc {
   git commit -m "$*"
 }
+
+# Starts or suspends the dev VM
+function vrun {
+  vmrun -T fusion $1 "$HOME/Virtual Machines/ArchLinux.vmwarevm/ArchLinux.vmx" nogui
+}
+function vm {
+  vrun start && sshfs willian@172.16.150.100: ~/dev-machine && ssh dev && vrun stop
+}
