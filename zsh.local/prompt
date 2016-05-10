@@ -52,8 +52,16 @@ __ruby_prompt() {
   echo "%F{8}[${RAILS_PROMPT}${RUBY_VERSION}]"
 }
 
+__hostname() {
+  local UNAME=`uname`
+
+  if [ "$UNAME" != "Darwin" ]; then
+    echo "@%m"
+  fi
+}
+
 precmd () {
   vcs_info
-  PS1="%F{12}[%n] $(__ruby_prompt) %F{3}%3~ ${vcs_info_msg_0_}
+  PS1="%F{12}[%n$(__hostname)] $(__ruby_prompt) %F{3}%3~ ${vcs_info_msg_0_}
 %f$ "
 }
