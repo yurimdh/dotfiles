@@ -51,5 +51,5 @@ function vrun {
   vmrun -T fusion $1 "$HOME/Virtual Machines/ArchLinux.vmwarevm/ArchLinux.vmx" nogui
 }
 function vm {
-  vrun start && sshfs willian@172.16.150.100: ~/dev-machine && ssh dev && vrun stop
+  vrun start && sshfs willian@172.16.150.100: ~/dev-machine && ssh dev && vrun suspend
 }
