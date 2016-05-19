@@ -27,11 +27,15 @@ alias staging-tail='heroku logs --tail --remote staging'
 alias production-console='heroku run console --remote production'
 alias production-tail='heroku logs --tail --remote production'
 
-# # Heroku databases
-
+# Heroku databases
 alias db-pull-production='development restore production'
 alias db-pull-staging='development restore staging'
 
 alias db-backup-production='heroku pgbackups:capture --remote production'
 alias db-backups='heroku pgbackups --remote production'
 alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
+
+# Docker
+alias dm="docker-machine"
+alias dc="docker-compose"
+alias dcrun="dc run --user $(id -u) --rm"
