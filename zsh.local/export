@@ -6,12 +6,6 @@ if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash zsh)"
 fi
 
-if which VBoxManage &>/dev/null ; then
-  if [[ `VBoxManage list runningvms` =~ default ]] && which docker-machine &>/dev/null ; then
-    eval "$(docker-machine env default --shell=zsh)"
-  fi
-fi
-
 if which vmrun &>/dev/null ; then
   if [[ `vmrun list` =~ default ]] && which docker-machine &>/dev/null ; then
     eval "$(docker-machine env default --shell=zsh)"
