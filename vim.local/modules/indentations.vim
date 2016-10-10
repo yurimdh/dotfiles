@@ -11,9 +11,6 @@ set tabstop=2
 " ****************************************************************
 " LANGUAGUE INDENT CONFIGURATION
 " ****************************************************************
-autocmd CursorHold,BufWritePost,BufReadPost,BufLeave *
-      \ if isdirectory(expand("<amatch>:h")) | let &swapfile = &modified | endif
-
 autocmd FileType javascript,javascript.jsx setlocal et sw=2 sts=2 isk+=$
 autocmd FileType html,xhtml,css            setlocal et sw=2 sts=2
 autocmd FileType eruby,yaml,ruby           setlocal et sw=2 sts=2
