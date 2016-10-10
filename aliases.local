@@ -39,3 +39,6 @@ alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku p
 alias dm="docker-machine"
 alias dc="docker-compose"
 alias dcrun="dc run --rm"
+
+# Linux
+alias dtsync="sudo kill -9 `pgrep ntpd`"
