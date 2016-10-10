@@ -1,4 +1,4 @@
-function git-new-remote-tracking {
+ function git-new-remote-tracking {
   git checkout -b $1 && git push -u origin $1
 }
 
@@ -48,8 +48,8 @@ function gc {
 
 # Starts or suspends the dev VM
 function vrun {
-  vmrun -T fusion $1 "$HOME/Virtual Machines/ArchLinux.vmwarevm/ArchLinux.vmx" nogui
+  vmrun -T fusion $1 "$HOME/Virtual Machines/dev-machine.vmwarevm/dev-machine.vmx" nogui
 }
 function vm {
-  vrun start && sshfs willian@172.16.150.100: ~/dev-machine && ssh dev && vrun suspend
+  vrun start && ssh dev && vrun suspend
 }
