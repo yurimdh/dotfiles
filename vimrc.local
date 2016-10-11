@@ -16,3 +16,7 @@ source ~/.vim.local/modules/ctrlp_settings.vim
 source ~/.vim.local/modules/javascript_settings.vim
 source ~/.vim.local/modules/ack_settings.vim
 source ~/.vim.local/modules/test_settings.vim
+source ~/.vim.local/modules/ultisnips_settings.vim
+source ~/.vim.local/modules/supertab_settings.vim
+source ~/.vim.local/modules/youcompleteme_settings.vim
+source ~/.vim.local/modules/nerdtree_settings.vim
