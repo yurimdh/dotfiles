@@ -36,4 +36,4 @@ let g:jsx_ext_required = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic Checker
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_javascript_checkers = ['standard']
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' || findfile('.eslintrc.json', '.;') != '' ? ['eslint'] : ['standard']
