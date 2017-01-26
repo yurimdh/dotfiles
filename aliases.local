@@ -40,5 +40,19 @@ alias dm="docker-machine"
 alias dc="docker-compose"
 alias dcrun="dc run --rm"
 
+# Utils
+alias tz="\
+printf 'local:\t\t ';\
+date;\
+printf 'London:\t\t ';\
+TZ='Europe/London' date;\
+printf 'Sao Paulo:\t ';\
+TZ='America/Sao_Paulo' date;\
+printf 'New York:\t ';\
+TZ='America/New_York' date;\
+printf 'San Francisco:\t ';\
+TZ='America/Los_Angeles' date;\
+"
+
 # Linux
 alias dtsync="sudo kill -9 `pgrep ntpd`"
