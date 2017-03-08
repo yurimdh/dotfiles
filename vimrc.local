@@ -9,7 +9,6 @@ source ~/.vim.local/modules/utils.vim
 source ~/.vim.local/modules/useful_mappings.vim
 source ~/.vim.local/modules/settings.vim
 source ~/.vim.local/modules/rails_settings.vim
-source ~/.vim.local/modules/rspec_settings.vim
 source ~/.vim.local/modules/search_settings.vim
 source ~/.vim.local/modules/tabularize_settings.vim
 source ~/.vim.local/modules/ctrlp_settings.vim
