@@ -57,3 +57,5 @@ TZ='America/Los_Angeles' date;\
 
 # Linux
 alias dtsync="sudo kill -9 `pgrep ntpd`"
+
+alias tmux=tmate
