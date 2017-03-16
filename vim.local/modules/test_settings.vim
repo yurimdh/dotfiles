@@ -16,9 +16,8 @@ map <leader>a :TestSuite<cr>
 " 'test' if it is available. Otherwiser, runs directly if the project is not
 " dockerized.
 function! CustomTesterTransform(cmd) abort
-  let userId = substitute(system('id -u'), '\n\+$', '', '')
   let dockerServiceName = 'test'
-  let customCommand = 'docker-compose run --rm --user=' . userId . ' ' . dockerServiceName . ' ' . a:cmd
+  let customCommand = 'docker-compose run --rm ' . dockerServiceName . ' ' . a:cmd
 
   if match(system('docker-compose config --services'), dockerServiceName) >= 0
     return customCommand
