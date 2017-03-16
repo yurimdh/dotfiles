@@ -48,10 +48,10 @@ function gc {
 
 # Starts or suspends the dev VM
 function vrun {
-  vmrun -T fusion $1 "$HOME/Virtual Machines/dev-machine.vmwarevm/dev-machine.vmx" nogui
+  vmrun -T fusion $2 "$HOME/Virtual Machines/$1.vmwarevm/$1.vmx" nogui
 }
 function vm {
-  vrun start && ssh dev && vrun suspend
+  vrun dev start && ssh dev && vrun dev suspend
 }
 
 git-on-development () {
