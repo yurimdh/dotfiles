@@ -58,3 +58,9 @@ function vrun {
 function vm {
   vrun dev start && ssh dev && vrun dev suspend
 }
+
+function vbvm {
+  VBoxManage startvm dev --type headless && \
+  ssh vbox-dev && \
+  VBoxManage controlvm dev savestate
+}
