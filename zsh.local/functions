@@ -17,12 +17,17 @@ function git-nuke {
 }
 compdef _git git-nuke=git-checkout
 
-function git-on-master {
+# Rebases a branch ($1) with the current branch
+function git-on-branch {
   branch=`git_branch_name`
-  git checkout master && git pull --rebase
+  git checkout $1 && git pull --rebase
   git checkout $branch
-  git rebase master
-  }
+  git rebase $1
+}
+
+function git-on-master {
+  git-on-branch master
+}
 
 function g {
   if [[ $# > 0 ]]; then
@@ -52,11 +57,4 @@ function vrun {
 }
 function vm {
   vrun dev start && ssh dev && vrun dev suspend
-}
-
-git-on-development () {
-  branch=`git_branch_name`
-  git checkout development && git pull --rebase
-  git checkout $branch
-  git rebase development
 }
