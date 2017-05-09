@@ -37,3 +37,5 @@ let g:jsx_ext_required = 0
 " Syntastic Checker
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' || findfile('.eslintrc.json', '.;') != '' ? ['eslint'] : ['standard']
+autocmd FileType javascript let s:eslint_path = system('PATH=$(npm bin):$PATH && command -v eslint || command -v standard')
+autocmd FileType javascript let b:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
