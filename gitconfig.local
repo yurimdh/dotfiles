@@ -1,6 +1,6 @@
 [user]
-  email = willian@willianfernandes.com.br
-  name = Willian Fernandes
+  email = yurisantos47@gmail.com
+  name = Yuri
 [color]
   diff = auto
   status = auto
@@ -32,4 +32,4 @@
 [push]
   default = current
 [github]
-  user = willian
+  user = yurimdh
