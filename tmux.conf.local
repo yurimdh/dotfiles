@@ -4,6 +4,8 @@ if-shell 'test "$(uname)" = "Darwin"' 'source ~/.tmux-osx.conf.local'
 # reload settings
 bind-key R source-file ~/.tmux.conf
 
+set -g prefix C-a
+
 # detach client
 bind-key d detach
 bind-key C-d detach
