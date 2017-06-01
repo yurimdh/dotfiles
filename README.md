@@ -1,4 +1,4 @@
-Willian's dotfiles
+Yuri's dotfiles
 ==================
 
 Requirements
@@ -19,7 +19,7 @@ Install
 After thoughtbot's dotfiles installation, clone onto your home directory:
 
 	$ cd ~
-	$ git clone git://github.com/willian/dotfiles.git dotfiles-local
+	$ git clone git://github.com/yurimdh/dotfiles.git dotfiles-local
 
 Install the dotfiles using [rcm](https://github.com/thoughtbot/rcm):
 
