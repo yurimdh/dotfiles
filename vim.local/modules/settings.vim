@@ -2,7 +2,7 @@
 " Some configurations with let
 " ****************************************************
 let mapleader = "\\"
-"
+
 " ****************************************************
 " Shares the clipboard with OS X
 " ****************************************************
@@ -23,6 +23,7 @@ set nowrap                          " Line wrapping off
 " ****************************************************
 " My set configurations
 " ****************************************************
+set pyxversion=3                                " Run pythonx as python3
 set bs=2                                        " Backspace over everything in insert mode
 set copyindent                                  " Copy previous indent on the current line
 set cursorline                                  " Setting a line over cursor
