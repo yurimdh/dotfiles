@@ -17,6 +17,4 @@ source ~/.vim.local/modules/test_settings.vim
 source ~/.vim.local/modules/ultisnips_settings.vim
 source ~/.vim.local/modules/supertab_settings.vim
 source ~/.vim.local/modules/nerdtree_settings.vim
-source ~/.vim.local/modules/ruby_settings.vim
-source ~/.vim.local/modules/scss_settings.vim
 source ~/.vim.local/modules/fzf_settings.vim

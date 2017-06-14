@@ -15,11 +15,4 @@ syntax on
 
 autocmd Syntax css syn sync minlines=50
 
-" ****************************************************
-" SETTING STATUSLINE
-" ****************************************************
-" Fugitive.vim statusline to show current branch
-set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=[%{&ft}]%-14.([%l/%L],%c%V%)\ %P
-
-" Syntastic statusline config to show syntax errors on saving
-set statusline+=%#warningmsg#%{SyntasticStatuslineFlag()}%*
+let g:ale_emit_conflict_warnings = 0 " Avoid conflict warning with Syntastic
