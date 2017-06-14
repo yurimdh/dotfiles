@@ -43,3 +43,7 @@ Plug 'othree/csscomplete.vim' " CSS
 Plug 'roxma/ncm-flow' " JavaScript (flow)
 Plug 'roxma/ncm-rct-complete' " Ruby
 Plug 'roxma/nvim-cm-tern',  { 'do': 'npm install' } " JavaScript (tern)
+
+" Fuzzy Finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
