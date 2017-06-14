@@ -15,4 +15,5 @@ syntax on
 
 autocmd Syntax css syn sync minlines=50
 
+let g:airline_theme='lucius' " Use Licius as the Airline main theme
 let g:ale_emit_conflict_warnings = 0 " Avoid conflict warning with Syntastic
