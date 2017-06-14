@@ -1,6 +1,5 @@
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Raimondi/delimitMate'
-Plug 'Valloric/YouCompleteMe'
 Plug 'claco/jasmine.vim'
 Plug 'duff/vim-bufonly'
 Plug 'editorconfig/editorconfig-vim'
@@ -34,3 +33,13 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-pathogen'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
+
+" Auto completion
+Plug 'roxma/nvim-completion-manager', { 'do': 'pip3 install --user neovim jedi mistune psutil setproctitle' }
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'Shougo/neco-vim' " Vimscript
+Plug 'nsf/gocode', { 'do': '~/.vim/bundle/gocode/nvim/symlink.sh' } " GoLang
+Plug 'othree/csscomplete.vim' " CSS
+Plug 'roxma/ncm-flow' " JavaScript (flow)
+Plug 'roxma/ncm-rct-complete' " Ruby
+Plug 'roxma/nvim-cm-tern',  { 'do': 'npm install' } " JavaScript (tern)
