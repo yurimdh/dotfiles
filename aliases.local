@@ -16,8 +16,9 @@ alias rc='rails console'
 alias ss='spring stop'
 alias tail-logs='heroku logs -t'
 alias track='git checkout -t'
-alias v='vim'
-alias vi='vim'
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
 
 # Heroku staging
 alias staging-console='heroku run console --remote staging'

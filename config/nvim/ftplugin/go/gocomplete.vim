@@ -1,0 +1,1 @@
+/Users/willian/.vim/bundle/gocode/nvim/ftplugin/go/gocomplete.vim
