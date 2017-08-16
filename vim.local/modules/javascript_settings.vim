@@ -29,6 +29,6 @@ endfunction
 map <leader>js :call RunJavaScriptFile()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" JSX Sintax highloghting
+" JSX Sintax highlighting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:jsx_ext_required = 0
