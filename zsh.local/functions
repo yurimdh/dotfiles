@@ -64,3 +64,11 @@ function vbvm {
   ssh vbox-dev && \
   VBoxManage controlvm dev savestate
 }
+
+function vmware-backup {
+  vmware_path=/Library/Preferences/VMware\ Fusion
+  backup_path="$HOME/Virtual Machines"
+
+  cp "$vmware_path/vmnet1/dhcpd.conf" "$backup_path/vmnet1-dhcpd.conf" && \
+  cp "$vmware_path/vmnet8/dhcpd.conf" "$backup_path/vmnet8-dhcpd.conf"
+}
