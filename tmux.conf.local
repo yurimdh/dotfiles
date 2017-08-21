@@ -98,3 +98,4 @@ set -g pane-border-fg "#999999"
 
 # fix nvim escape
 set -sg escape-time 0
+set -g -a terminal-overrides ",screen*:Ss=[%p1%d q:Se=[2 q"
