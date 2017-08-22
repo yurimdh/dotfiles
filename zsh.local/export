@@ -2,7 +2,7 @@ export CDPATH=.:~:~/Projects:~/Projects/PrintBear:~/Projects/Toptal:~/GitHub:/va
 export LC_ALL="$LANG"
 export GOPATH=$HOME/.go
 export TERM=xterm-256color
-PATH="$HOME/.rbenv/bin:./bin:$HOME/local/node/npm/bin:/usr/local/sbin:/Applications/VMware Fusion.app/Contents/Library:$GOPATH/bin:$PATH"
+PATH="$HOME/.rbenv/bin:./bin:$HOME/local/node/npm/bin:/usr/local/sbin:/Applications/VMware Fusion.app/Contents/Library:$GOPATH/bin:$HOME/.yarn/bin:$PATH"
 
 if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash zsh)"
@@ -13,3 +13,5 @@ if which vmrun &>/dev/null ; then
     eval "$(docker-machine env default --shell=zsh)"
   fi
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
