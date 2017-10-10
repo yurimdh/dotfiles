@@ -1,10 +1,10 @@
 setopt prompt_subst
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr     '%F{10}-%f'
-zstyle ':vcs_info:*' unstagedstr   '%B%F{1}~%f%b'
+zstyle ':vcs_info:*' stagedstr     '%F{10}+%f'
+zstyle ':vcs_info:*' unstagedstr   '%B%F{1}!%f%b'
 zstyle ':vcs_info:*' formats       '%F{magenta}%b%f %u%c%m '
-zstyle ':vcs_info:*' actionformats '%F{11}%b%f %u%c%m %B%s-%a%%b '
+zstyle ':vcs_info:*' actionformats '%F{11}%b%f %u%c %B%s-%a%%b '
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-aheadbehind
 
 ### git: Show marker (T) if there are untracked files in repository
@@ -12,27 +12,19 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-aheadbehind
 function +vi-git-untracked(){
   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
     git status --porcelain | fgrep '??' &> /dev/null ; then
-    # This will show the marker if there are any untracked files in repo.
-    # If instead you want to show the marker only if there are untracked
-    # files in $PWD, use:
-    #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
     hook_com[unstaged]+='%F{3}*%f'
   fi
 }
 
-### git: Show +N/-N when your local branch is ahead-of or behind remote HEAD.
+### git: Show ↑/↓ when your local branch is ahead-of or behind remote HEAD.
 # Make sure you have added misc to your 'formats':  %m
 function +vi-git-aheadbehind() {
   local ahead behind
   local -a gitstatus
 
-  # for git prior to 1.7
-  # ahead=$(git rev-list origin/${hook_com[branch]}..HEAD | wc -l)
   ahead=$(git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null | wc -l | tr -d ' ')
   (( $ahead )) && gitstatus+=( "%F{1}↑%f" )
 
-  # for git prior to 1.7
-  # behind=$(git rev-list HEAD..origin/${hook_com[branch]} | wc -l)
   behind=$(git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null | wc -l | tr -d ' ')
   (( $behind )) && gitstatus+=( "%F{1}↓%f" )
 
