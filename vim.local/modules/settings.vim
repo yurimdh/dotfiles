@@ -26,6 +26,7 @@ set nowrap                          " Line wrapping off
 if !has('nvim')
   set pyxversion=3                              " Run pythonx as python3
 endif
+set autoread                                    " Auto reload current file when it changes
 set bs=2                                        " Backspace over everything in insert mode
 set copyindent                                  " Copy previous indent on the current line
 set cursorline                                  " Setting a line over cursor
