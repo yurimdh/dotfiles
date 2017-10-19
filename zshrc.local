@@ -4,7 +4,9 @@
 [[ -f ~/.zsh.local/prompt ]] && source ~/.zsh.local/prompt
 [[ -f ~/.zsh.local/tmuxinator.zsh ]] && source ~/.zsh.local/tmuxinator.zsh
 
-# Go to /vagrant it it's a Vagrant VM
+# Go to /vagrant if it's a Vagrant VM
 if [ -d /vagrant ]; then
   cd /vagrant
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
