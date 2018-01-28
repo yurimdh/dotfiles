@@ -56,7 +56,9 @@ function vrun {
   vmrun -T fusion $2 "$HOME/Virtual Machines/$1.vmwarevm/$1.vmx" nogui
 }
 function vm {
-  vrun dev-v2 start && ssh dev && vrun dev-v2 suspend
+  vrun dev-v3 start \
+    && (ssh dev || (sleep 20 && ssh dev)) \
+    && vrun dev-v3 suspend
 }
 
 function vbvm {
