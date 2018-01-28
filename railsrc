@@ -1,4 +1,7 @@
 --skip-action-cable
 --skip-bundle
+--skip-coffee
 --skip-listen
 --skip-spring
+--skip-system-test
+--skip-test
