@@ -1,1 +1,2 @@
-prefix = ~/local/node/npm
+prefix=/Users/willian/local/node/npm
+//registry.npmjs.org/:_authToken=4c09910d-4efd-49a5-a396-308b8c87b298
