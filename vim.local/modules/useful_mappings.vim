@@ -23,6 +23,7 @@ nmap <silent> <leader>p :NERDTreeToggle<CR>
 
 " Mapping <tab> to chage tabs on commands mode
 nmap <tab> :tabnext<CR>
+nmap <S-tab> :tabprevious<CR>
 
 " Make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
