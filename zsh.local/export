@@ -2,7 +2,9 @@ export CDPATH=.:~:~/Projects:~/Projects/PrintBear:~/Projects/Toptal:~/GitHub:/va
 export LC_ALL="$LANG"
 export GOPATH=$HOME/.go
 export TERM=xterm-256color
-PATH="./bin:$HOME/local/node/npm/bin:/usr/local/sbin:/Applications/VMware Fusion.app/Contents/Library:$GOPATH/bin:$HOME/.yarn/bin:$PATH"
+
+local node_bin_path=`npm config get prefix`/bin
+PATH="./bin:$HOME/local/node/npm/bin:$node_bin_path:/usr/local/sbin:/Applications/VMware Fusion.app/Contents/Library:$GOPATH/bin:$HOME/.yarn/bin:$PATH"
 
 if which vmrun &>/dev/null ; then
   if [[ `vmrun list` =~ default ]] && which docker-machine &>/dev/null ; then
