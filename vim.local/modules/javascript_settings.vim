@@ -32,8 +32,3 @@ map <leader>js :call RunJavaScriptFile()<cr>
 " JSX Sintax highlighting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:jsx_ext_required = 0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Configuring ALE standard executable by adding a custom parser
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_javascript_standard_executable = 'standard --parser babel-eslint'
