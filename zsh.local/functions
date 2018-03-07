@@ -55,6 +55,7 @@ function gc {
 function vrun {
   vmrun -T fusion $2 "$HOME/Virtual Machines/$1.vmwarevm/$1.vmx" nogui
 }
+
 function vm {
   vrun dev-v3 start \
     && (ssh dev || (sleep 20 && ssh dev)) \
@@ -63,7 +64,7 @@ function vm {
 
 function vbvm {
   VBoxManage startvm dev --type headless && \
-  ssh vbox-dev && \
+  ssh dev && \
   VBoxManage controlvm dev savestate
 }
 
