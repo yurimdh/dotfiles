@@ -14,3 +14,6 @@ if which vmrun &>/dev/null ; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
