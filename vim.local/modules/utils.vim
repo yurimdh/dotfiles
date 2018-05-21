@@ -13,3 +13,6 @@ else
   set viminfo='10,\"30,:40,%,n~/.viminfo
   au BufReadPost * if line("'\"") | execute("normal `\"")|endif
 endif
+
+" Triggers autoread whenever vim switch buffer or when focusing vim again
+au FocusGained,BufEnter * :silent! !
