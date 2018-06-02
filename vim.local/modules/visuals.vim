@@ -3,7 +3,7 @@
 " ****************************************************************
 augroup vimrc
   autocmd!
-  autocmd GuiEnter * set guifont=Menlo:h14 guioptions-=T columns=203 lines=70
+  autocmd GuiEnter * set guifont=Menlo:h16 guioptions-=T columns=203 lines=70
 augroup END
 
 " ****************************************************************
