@@ -50,6 +50,12 @@ set wildignore+=*.bundle                        " Stuff to ignore when tab compl
 set noswapfile                                  " Don't create annoying *.swp files"
 
 " ****************************************************
+" Trigger autoread whenever I switch buffer or when
+" focusing vim again
+" ****************************************************
+au FocusGained,BufEnter * :silent! !
+
+" ****************************************************
 " Clear highlighted searches
 " ****************************************************
 nmap <silent> <leader>/ :nohlsearch<CR>
