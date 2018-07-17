@@ -8,7 +8,6 @@ Plug 'godlygeek/csapprox'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'jonathanfilip/vim-lucius'
 Plug 'justinj/vim-react-snippets'
 Plug 'leshill/vim-json'
 Plug 'mattn/gist-vim'
@@ -33,14 +32,14 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-pathogen'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
+Plug 'wakatime/vim-wakatime'
+
+" Color scheme
+Plug 'jonathanfilip/vim-lucius'
 
 " Statusline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Linter
-UnPlug 'scrooloose/syntastic'
-Plug 'w0rp/ale'
 
 " Auto completion
 Plug 'roxma/nvim-completion-manager', { 'do': 'pip3 install --user neovim jedi mistune psutil setproctitle' }
