@@ -75,7 +75,7 @@ set -g visual-activity on
 
 # amount of time for which status line messages and other indicators
 # are displayed. time is in milliseconds.
-set -g status-right "#[fg=#eeeeee]#(pmset -g batt | ~/.bin/battinfo.rb) | %H:%M"
+set -g status-right "#[fg=#eeeeee]%H:%M"
 
 # Colors based on Lucius theme
 # status bar
