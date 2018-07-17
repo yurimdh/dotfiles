@@ -13,7 +13,6 @@ Plug 'justinj/vim-react-snippets'
 Plug 'leshill/vim-json'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
-Plug 'mileszs/ack.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
 Plug 'nanotech/jellybeans.vim'
@@ -54,5 +53,7 @@ Plug 'roxma/ncm-rct-complete' " Ruby
 Plug 'roxma/nvim-cm-tern',  { 'do': 'npm install' } " JavaScript (tern)
 
 " Fuzzy Finder
+call remove(g:plugs, 'ctrlp.vim')
+Plug 'ctrlpvim/ctrlp.vim', { 'on': [] }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'

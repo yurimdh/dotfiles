@@ -1,5 +1,4 @@
 alias -g G='| grep'
-alias ack='ag'
 alias amend='git commit --amend'
 alias be='bundle exec'
 alias bu='bundle update'

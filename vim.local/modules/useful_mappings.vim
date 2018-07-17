@@ -74,5 +74,5 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Ack with <leader>f
-map <Leader>f :Ack!<Space>
+" ag with <leader>f
+map <Leader>f :Ag<Space>

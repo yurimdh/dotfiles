@@ -31,7 +31,7 @@ set bs=2                                        " Backspace over everything in i
 set copyindent                                  " Copy previous indent on the current line
 set cursorline                                  " Setting a line over cursor
 set encoding=utf-8                              " Default encoding is utf8
-set grepprg=ack                                 " Use Ack instead of grep"
+set grepprg=ag                                  " Use ag instead of grep"
 set hidden                                      " Don't close buffers, just hidden them
 set list                                        " Configuration to use definitions below
 set listchars=extends:>,precedes:<              " Special chars to show tabs, eol and bol
