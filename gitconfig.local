@@ -23,7 +23,7 @@
   sh = !git-sh
   who = shortlog -s -n --
 [core]
-  editor = vim
+  editor = nvim
 [help]
   autosetupmerge = true
   autocorrect = 1
