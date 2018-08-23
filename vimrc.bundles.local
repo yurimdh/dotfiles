@@ -36,6 +36,7 @@ Plug 'wakatime/vim-wakatime'
 
 " Color scheme
 Plug 'jonathanfilip/vim-lucius'
+Plug 'rakr/vim-one'
 
 " Statusline
 Plug 'vim-airline/vim-airline'
