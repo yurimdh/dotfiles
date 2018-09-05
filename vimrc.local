@@ -10,11 +10,11 @@ source ~/.vim.local/modules/useful_mappings.vim
 source ~/.vim.local/modules/settings.vim
 source ~/.vim.local/modules/rails_settings.vim
 source ~/.vim.local/modules/search_settings.vim
-source ~/.vim.local/modules/tabularize_settings.vim
 source ~/.vim.local/modules/javascript_settings.vim
 source ~/.vim.local/modules/test_settings.vim
 source ~/.vim.local/modules/ultisnips_settings.vim
-source ~/.vim.local/modules/supertab_settings.vim
 source ~/.vim.local/modules/nerdtree_settings.vim
 source ~/.vim.local/modules/scss_settings.vim
 source ~/.vim.local/modules/fzf_settings.vim
+source ~/.vim.local/modules/auto_complete.vim
+source ~/.vim.local/modules/multiple_cursors.vim
