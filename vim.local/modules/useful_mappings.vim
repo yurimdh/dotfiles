@@ -76,3 +76,6 @@ map <C-l> <C-w>l
 
 " ag with <leader>f
 map <Leader>f :Ag<Space>
+
+" ALEFix
+nmap <C-f> :ALEFix<CR>
