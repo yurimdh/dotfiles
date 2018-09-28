@@ -28,14 +28,14 @@ if (empty($TMUX))
 endif
 
 " colorscheme lucius
-set background=light
+set background=dark
 let g:one_allow_italics = 1
-colorscheme one
+colorscheme dracula
 filetype plugin indent on
 syntax on
 
 autocmd Syntax css syn sync minlines=50
 
 " let g:airline_theme='lucius' " Use Licius as the Airline main theme
-let g:airline_theme='one'
+let g:airline_theme='dracula'
 let g:ale_emit_conflict_warnings = 0 " Avoid conflict warning with Syntastic

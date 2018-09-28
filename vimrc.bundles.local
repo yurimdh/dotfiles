@@ -41,6 +41,8 @@ Plug 'tpope/vim-liquid'
 Plug 'sunaku/vim-ruby-minitest'
 
 " Color scheme
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'dracula/vim'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'rakr/vim-one'
 
