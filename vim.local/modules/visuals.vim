@@ -27,7 +27,6 @@ if (empty($TMUX))
   endif
 endif
 
-" colorscheme lucius
 set background=light
 let g:one_allow_italics = 1
 colorscheme one
@@ -38,4 +37,3 @@ autocmd Syntax css syn sync minlines=50
 
 " let g:airline_theme='lucius' " Use Licius as the Airline main theme
 let g:airline_theme='one'
-let g:ale_emit_conflict_warnings = 0 " Avoid conflict warning with Syntastic
