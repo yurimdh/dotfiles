@@ -58,43 +58,43 @@ bind-key -r = resize-pane -D 1
 setw -g monitor-activity on
 set -g visual-activity on
 
-# # soften status bar color from harsh green to light gray
-# set -g status-bg colour234
-# set -g status-fg colour60
+# soften status bar color from harsh green to light gray
+set -g status-bg colour234
+set -g status-fg colour60
 
-# #Inactive windows
-# setw -g window-status-style "fg=colour255,bg=default,dim"
-#
-# #"Activity" Window
-# setw -g window-status-activity-style "fg=colour147,bg=default,underscore,dim"
-#
-# #Active Window
-# setw -g window-status-current-style "fg=colour156, bg=default"
+#Inactive windows
+setw -g window-status-style "fg=colour255,bg=default,dim"
 
-# # Statusbar settings
-#
-# # amount of time for which status line messages and other indicators
-# # are displayed. time is in milliseconds.
-# set -g status-right "#[fg=#eeeeee]%H:%M"
-#
-# # Colors based on Lucius theme
-# # status bar
-# set -g status-bg "#999999"
-# set -g status-fg "#eeeeee"
-#
-# # highlight active window
-# setw -g window-status-current-bg "#eeeeee"
-# setw -g window-status-current-fg "#006699"
-#
-# # highlight activity in status bar
-# setw -g window-status-activity-bg "#FFAF00"
-# setw -g window-status-activity-fg "#FFFFFF"
-#
-# # pane border and colors
-# set -g pane-active-border-bg "#eeeeee"
-# set -g pane-active-border-fg "#006699"
-# set -g pane-border-bg "#eeeeee"
-# set -g pane-border-fg "#999999"
+#"Activity" Window
+setw -g window-status-activity-style "fg=colour147,bg=default,underscore,dim"
+
+#Active Window
+setw -g window-status-current-style "fg=colour156, bg=default"
+
+# Statusbar settings
+
+# amount of time for which status line messages and other indicators
+# are displayed. time is in milliseconds.
+set -g status-right "#[fg=#eeeeee]%H:%M"
+
+# Colors based on Lucius theme
+# status bar
+set -g status-bg "#999999"
+set -g status-fg "#eeeeee"
+
+# highlight active window
+setw -g window-status-current-bg "#eeeeee"
+setw -g window-status-current-fg "#006699"
+
+# highlight activity in status bar
+setw -g window-status-activity-bg "#FFAF00"
+setw -g window-status-activity-fg "#FFFFFF"
+
+# pane border and colors
+set -g pane-active-border-bg "#eeeeee"
+set -g pane-active-border-fg "#006699"
+set -g pane-border-bg "#eeeeee"
+set -g pane-border-fg "#999999"
 
 # fix nvim escape
 set -sg escape-time 0
@@ -107,5 +107,5 @@ set-option -ga terminal-overrides ",xterm-256color:Tc"
 set -g default-terminal "tmux-256color"
 set -as terminal-overrides ',xterm*:sitm=\E[3m'
 
-run-shell "powerline-daemon -q"
-source "/Users/willian/.asdf/installs/python/3.6.3/lib/python3.6/site-packages/powerline/bindings/tmux/powerline.conf"
+# run-shell "powerline-daemon -q"
+# source "/Users/willian/.asdf/installs/python/3.6.3/lib/python3.6/site-packages/powerline/bindings/tmux/powerline.conf"
