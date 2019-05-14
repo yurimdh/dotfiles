@@ -8,6 +8,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-pasta'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
@@ -27,6 +28,7 @@ Plug 'honza/vim-snippets'
 Plug 'claco/jasmine.vim'
 Plug 'justinj/vim-react-snippets'
 Plug 'leshill/vim-json'
+" Plug 'mattn/emmet-vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
@@ -41,11 +43,12 @@ Plug 'sunaku/vim-ruby-minitest'
 
 " Color scheme
 Plug 'jonathanfilip/vim-lucius'
-Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
 
 " Statusline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 
 " Auto completion
 Plug 'roxma/nvim-yarp'
