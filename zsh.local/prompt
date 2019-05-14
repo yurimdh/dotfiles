@@ -41,7 +41,7 @@ __ruby_prompt() {
     local RAILS_PROMPT="${RAILS_VERSION}#"
   fi
 
-  echo "%F{8}[${RAILS_PROMPT}${RUBY_VERSION}]"
+  echo "%F{2}[${RAILS_PROMPT}${RUBY_VERSION}]"
 }
 
 __hostname() {
@@ -54,6 +54,6 @@ __hostname() {
 
 precmd () {
   vcs_info
-  PS1="%F{12}[%n$(__hostname)] $(__ruby_prompt) %F{3}%3~ ${vcs_info_msg_0_}
+  PS1="%F{4}[%n$(__hostname)] $(__ruby_prompt) %F{3}%3~ ${vcs_info_msg_0_}
 %f$ "
 }
