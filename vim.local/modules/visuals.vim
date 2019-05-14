@@ -24,7 +24,6 @@ if (has("termguicolors"))
 endif
 
 syntax on
-" set background=light
 set background=dark
 let g:onedark_terminal_italics = 1
 colorscheme onedark
@@ -32,17 +31,17 @@ filetype plugin indent on
 
 autocmd Syntax css syn sync minlines=50
 
-" let g:airline_theme='lucius' " Use Licius as the Airline main theme
 let g:airline_theme='onedark'
+let g:airline#extensions#tmuxline#enabled = 0
 " let g:tmuxline_separators = {
 "     \ 'left' : '⮀',
 "     \ 'left_alt': '⮁',
 "     \ 'right' : '⮂',
 "     \ 'right_alt' : '⮃',
 "     \ 'space' : ' '}
-let g:tmuxline_separators = {
-    \ 'left' : '',
-    \ 'left_alt': '›',
-    \ 'right' : '',
-    \ 'right_alt' : '‹',
-    \ 'space' : ' '}
+" let g:tmuxline_separators = {
+"     \ 'left' : '',
+"     \ 'left_alt': '›',
+"     \ 'right' : '',
+"     \ 'right_alt' : '‹',
+"     \ 'space' : ' '}
