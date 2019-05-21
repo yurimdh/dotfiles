@@ -24,6 +24,7 @@
   who = shortlog -s -n --
 [core]
   editor = nvim
+  ignorecase = false
 [help]
   autosetupmerge = true
   autocorrect = 1
