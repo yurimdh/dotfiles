@@ -4,3 +4,5 @@ rails_best_practices
 reek
 rubocop-airbnb
 tmuxinator
+ruby-debug-ide
+byebug
