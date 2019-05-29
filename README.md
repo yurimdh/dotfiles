@@ -62,20 +62,54 @@ zhuangtongfa.material-theme
 
 ```json
 {
+  "breadcrumbs.enabled": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.cursorSmoothCaretAnimation": true,
   "editor.detectIndentation": true,
+  "editor.folding": false,
   "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": false,
   "editor.fontSize": 21,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
   "editor.lightbulb.enabled": false,
+  "editor.minimap.enabled": false,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
+  "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
+  "editor.suggest.localityBonus": true,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.wordBasedSuggestions": false,
+  "eslint.autoFixOnSave": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.options": {
+    "env": {
+      "browser": true,
+      "jest/globals": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "no-debugger": "off"
+    }
+  },
   "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
   "files.associations": {
     "*.md": "mdx"
   },
@@ -83,6 +117,12 @@ zhuangtongfa.material-theme
     "USE_GITIGNORE": true
   },
   "html.format.indentInnerHtml": true,
+  "javascript.suggest.autoImports": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "javascript.validate.enable": false,
+  "prettier.bracketSpacing": false,
+  "prettier.eslintIntegration": false,
+  "prettier.jsxBracketSameLine": false,
   "prettier.printWidth": 100,
   "prettier.proseWrap": "always",
   "prettier.requireConfig": true,
@@ -90,25 +130,62 @@ zhuangtongfa.material-theme
   "prettier.singleQuote": true,
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "all",
+  "prettier.useTabs": false,
   "ruby.format": "rubocop",
   "ruby.lint": {
     "rubocop": true
   },
   "search.exclude": {
-    "**/node_modules": true,
+    "**/.build": true,
+    "**/.gh-pages": true,
     "**/bower_components": true,
+    "**/build": true,
     "**/coverage": true,
     "**/dist": true,
-    "**/build": true,
-    "**/.build": true,
-    "**/.gh-pages": true
+    "**/node_modules": true
   },
+  "spellright.documentTypes": [
+    "markdown",
+    "plaintext",
+    "mdx"
+  ],
+  "spellright.language": [
+    "en",
+    "pt-BR"
+  ],
+  "spellright.parserByClass": {
+    "mdx": {
+      "parser": "markdown"
+    }
+  },
+  "terminal.external.linuxExec": "hyper",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.fontSize": 21,
   "terminal.integrated.scrollback": 10000,
+  "typescript.suggest.autoImports": false,
+  "typescript.updateImportsOnFileMove.enabled": "never",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "One Dark Pro"
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.panel.defaultLocation": "bottom",
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "none",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.suggest.filteredTypes": {
+      "keyword": false
+    },
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.suggest.filteredTypes": {
+      "keyword": false,
+    },
+  },
 }
 ```
