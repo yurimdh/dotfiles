@@ -1,3 +1,9 @@
+if [[ -x "$(which colorls)" ]]; then
+  alias ll="colorls -Ala"
+else
+  alias ll="ls -FGlahs"
+fi
+
 alias -g G='| grep'
 alias amend='git commit --amend'
 alias be='bundle exec'
@@ -11,6 +17,7 @@ alias hpr='hub pull-request'
 alias hpush='git push heroku'
 alias irb='irb --readline -r irb/completion'
 alias killruby='killall -9 ruby'
+alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 alias rc='rails console'
 alias ss='spring stop'
 alias tail-logs='heroku logs -t'

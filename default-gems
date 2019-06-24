@@ -6,3 +6,4 @@ rubocop-airbnb
 tmuxinator
 ruby-debug-ide
 byebug
+colorls

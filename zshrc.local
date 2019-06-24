@@ -10,3 +10,4 @@ if [ -d /vagrant ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source $(dirname $(gem which colorls))/tab_complete.sh
