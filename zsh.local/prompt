@@ -101,6 +101,7 @@ __react_prompt() {
     fi
   done
 
+
   if [ -f "$manifest" ]; then
     name_hex=$(pwd | md5)
     content_hex=$(cat "$manifest" | md5)
@@ -112,7 +113,9 @@ __react_prompt() {
     else
       if [ -f "$pkg_manifest" ]; then
         react_version=$(cat "$pkg_manifest" | jq '.version' | sed -E 's/[^0-9.]//g')
-      else
+      fi
+
+      if [ "$react_version" == "" ]; then
         react_version=$(npm ls react 2> /dev/null | grep react@ | sed -E 's/[^0-9.]//g')
       fi
 
