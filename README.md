@@ -70,9 +70,10 @@ zhuangtongfa.material-theme
   "editor.folding": false,
   "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": false,
-  "editor.fontSize": 21,
+  "editor.fontSize": 18,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 1500,
   "editor.glyphMargin": false,
   "editor.lightbulb.enabled": false,
   "editor.minimap.enabled": false,
@@ -108,6 +109,7 @@ zhuangtongfa.material-theme
       "no-debugger": "off"
     }
   },
+  "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "files.associations": {
@@ -120,6 +122,7 @@ zhuangtongfa.material-theme
   "javascript.suggest.autoImports": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
+  "material-icon-theme.activeIconPack": "react_redux",
   "prettier.bracketSpacing": false,
   "prettier.eslintIntegration": false,
   "prettier.jsxBracketSameLine": false,
@@ -132,9 +135,12 @@ zhuangtongfa.material-theme
   "prettier.trailingComma": "all",
   "prettier.useTabs": false,
   "ruby.format": "rubocop",
+  "ruby.interpreter.commandPath": "/Users/willian/.asdf/shims/ruby",
   "ruby.lint": {
     "rubocop": true
   },
+  "ruby.specCommand": "docker-compose run --rm test bundle exec rspec",
+  "ruby.specSaveFile": true,
   "search.exclude": {
     "**/.build": true,
     "**/.gh-pages": true,
@@ -161,8 +167,11 @@ zhuangtongfa.material-theme
   "terminal.external.linuxExec": "hyper",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.fontSize": 21,
+  "terminal.integrated.fontFamily": "'Hack Nerd Font'",
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "typescript.suggest.autoImports": false,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -179,6 +188,9 @@ zhuangtongfa.material-theme
     "editor.suggest.filteredTypes": {
       "keyword": false
     },
+  },
+  "[ruby]": {
+    "editor.formatOnSave": true
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
