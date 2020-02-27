@@ -1,9 +1,13 @@
 brakeman
+byebug
+colorls
+debase
 neovim
 rails_best_practices
 reek
+rubocop-
 rubocop-airbnb
-tmuxinator
+rubocop-performance
 ruby-debug-ide
-byebug
-colorls
+solargraph
+tmuxinator

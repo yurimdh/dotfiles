@@ -40,9 +40,11 @@ Plug 'tpope/vim-liquid'
 " Ruby development
 Plug 'sunaku/vim-ruby-minitest'
 
-" Color scheme
-Plug 'jonathanfilip/vim-lucius'
-Plug 'joshdick/onedark.vim'
+" Visual
+" Plug 'jonathanfilip/vim-lucius'
+" Plug 'joshdick/onedark.vim'
+Plug 'haishanh/night-owl.vim' " Theme
+Plug 'Yggdroot/indentLine'
 
 " Statusline
 Plug 'vim-airline/vim-airline'

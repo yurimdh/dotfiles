@@ -25,11 +25,19 @@ endif
 
 syntax on
 set background=dark
-let g:onedark_terminal_italics = 1
-colorscheme onedark
+colorscheme night-owl
 filetype plugin indent on
 
 autocmd Syntax css syn sync minlines=50
 
-let g:airline_theme='onedark'
+let g:airline_theme='night_owl'
 let g:airline#extensions#tmuxline#enabled = 0
+
+highlight Comment gui=italic cterm=italic
+highlight htmlArg gui=italic cterm=italic
+highlight Type gui=italic cterm=italic
+highlight Constant gui=italic cterm=italic
+highlight jsStorageClass gui=italic cterm=italic
+highlight ColorColumn guibg=#112630 ctermbg=235 gui=NONE cterm=NONE
+
+let g:indentLine_char = '│'
