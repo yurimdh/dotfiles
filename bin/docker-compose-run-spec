@@ -1,0 +1,18 @@
+#! /Users/willian/.asdf/shims/ruby
+require 'fileutils'
+
+spec_file = ARGV.last.dup
+spec_file.gsub!(/\A[a-z\-]+\/(.*)\z/, '\1') unless spec_file.start_with?('spec')
+
+services = `docker-compose ps --services`
+service_name = if services =~ /api/
+                "api"
+              elsif services =~ /app/
+                "app"
+              else
+                "test"
+              end
+
+command = "docker-compose run --rm #{service_name} bundle exec rspec #{spec_file}"
+
+exec command

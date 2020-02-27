@@ -1,0 +1,20 @@
+#! /Users/willian/.asdf/shims/ruby
+
+require 'open-uri'
+
+nf_url = ARGV[0]
+nf_number = ARGV[1]
+
+dir_path = "#{ENV['HOME']}/Dropbox/PJ/NFs-e/#{Time.now.strftime("%Y/%m")}"
+
+print "Creating directory #{dir_path}... "
+system("mkdir -p #{dir_path}")
+puts "Done."
+
+print "Downloading and saving NFS-e... "
+open(nf_url) do |pdf|
+  File.open("#{dir_path}/#{nf_number}.pdf", "wb+") { |f| f.write(pdf.read) }
+end
+puts "Done."
+
+system("open #{dir_path}/#{nf_number}.pdf")
