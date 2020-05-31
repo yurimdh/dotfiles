@@ -1,1 +1,3 @@
-prefix=/Users/yurisantos/local/node/npm
+prefix=/Users/yuri/local/node/npm
+always-auth=true
+python=/Users/yuri/.asdf/shims/python

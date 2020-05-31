@@ -1,7 +1,6 @@
 " ****************************************************************
 " MODULES
 " ****************************************************************
-source ~/.vim.local/modules/visuals.vim
 source ~/.vim.local/modules/file_types.vim
 source ~/.vim.local/modules/indentations.vim
 source ~/.vim.local/modules/functions.vim
@@ -18,3 +17,5 @@ source ~/.vim.local/modules/scss_settings.vim
 source ~/.vim.local/modules/fzf_settings.vim
 source ~/.vim.local/modules/auto_complete.vim
 source ~/.vim.local/modules/multiple_cursors.vim
+source ~/.vim.local/modules/ale.vim
+source ~/.vim.local/modules/visuals.vim

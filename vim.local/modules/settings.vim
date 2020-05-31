@@ -35,7 +35,6 @@ set grepprg=ag                                  " Use ag instead of grep"
 set hidden                                      " Don't close buffers, just hidden them
 set list                                        " Configuration to use definitions below
 set listchars=extends:>,precedes:<              " Special chars to show tabs, eol and bol
-set listchars+=eol:¬                            " Special chars to show tabs, eol and bol
 set relativenumber                              " Show line numbers relative to each other"
 set wildmenu                                    " Enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore+=*.o,*~,*.swp,*.pyc,*.pyo        " Stuff to ignore when tab completing
@@ -48,6 +47,8 @@ set wildignore+=*.gif,*.jpg,*.png,*.jpeg        " Stuff to ignore when tab compl
 set wildignore+=*.eot,*.svg,*.ttf,*.woff        " Stuff to ignore when tab completing
 set wildignore+=*.bundle                        " Stuff to ignore when tab completing
 set noswapfile                                  " Don't create annoying *.swp files"
+set textwidth=100
+set colorcolumn=+1
 
 " ****************************************************
 " Trigger autoread whenever I switch buffer or when

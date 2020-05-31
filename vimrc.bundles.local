@@ -2,14 +2,13 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Raimondi/delimitMate'
 Plug 'duff/vim-bufonly'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'elixir-editors/vim-elixir'
-Plug 'ervandew/supertab'
 Plug 'godlygeek/csapprox'
 Plug 'godlygeek/tabular'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-pasta'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
@@ -18,7 +17,6 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-pathogen'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
-Plug 'wakatime/vim-wakatime'
 
 " Snipperts
 Plug 'tomtom/tlib_vim'
@@ -29,29 +27,29 @@ Plug 'honza/vim-snippets'
 Plug 'claco/jasmine.vim'
 Plug 'justinj/vim-react-snippets'
 Plug 'leshill/vim-json'
+" Plug 'mattn/emmet-vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
-Plug 'othree/html5.vim'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-liquid'
 
 " Ruby development
 Plug 'sunaku/vim-ruby-minitest'
 
-" Color scheme
-Plug 'NLKNguyen/papercolor-theme'
+" Visual
+" Plug 'jonathanfilip/vim-lucius'
+" Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim'
-Plug 'jonathanfilip/vim-lucius'
-Plug 'rakr/vim-one'
+Plug 'Yggdroot/indentLine'
 
 " Statusline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Linter
-Plug 'w0rp/ale'
+Plug 'edkolev/tmuxline.vim'
 
 " Auto completion
 Plug 'roxma/nvim-yarp'

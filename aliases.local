@@ -1,3 +1,9 @@
+if [[ -x "$(which colorls)" ]]; then
+  alias ll="colorls -Ala"
+else
+  alias ll="ls -FGlahs"
+fi
+
 alias -g G='| grep'
 alias amend='git commit --amend'
 alias be='bundle exec'
@@ -11,6 +17,7 @@ alias hpr='hub pull-request'
 alias hpush='git push heroku'
 alias irb='irb --readline -r irb/completion'
 alias killruby='killall -9 ruby'
+alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 alias rc='rails console'
 alias ss='spring stop'
 alias tail-logs='heroku logs -t'
@@ -18,6 +25,7 @@ alias track='git checkout -t'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+alias mux='tmuxinator'
 
 # Heroku staging
 alias staging-console='heroku run console --remote staging'
@@ -39,6 +47,7 @@ alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku p
 alias dm="docker-machine"
 alias dc="docker-compose"
 alias dcrun="dc run --rm"
+alias dcstop="dc stop && dc rm -f"
 alias dcrunu="dc run --rm --user=$(id -u)"
 
 # Utils
@@ -57,5 +66,3 @@ TZ='America/Los_Angeles' date;\
 
 # Linux
 alias dtsync="sudo systemctl stop ntpd.service && sudo ntpdate a.ntp.br && sudo systemctl start ntpd.service"
-
-alias tmux=tmate

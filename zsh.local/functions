@@ -75,3 +75,10 @@ function vmware-backup {
   cp "$vmware_path/vmnet1/dhcpd.conf" "$backup_path/vmnet1-dhcpd.conf" && \
   cp "$vmware_path/vmnet8/dhcpd.conf" "$backup_path/vmnet8-dhcpd.conf"
 }
+
+function docker-saf-prune {
+  echo "Removing exited containers..."
+  docker ps --quiet -f status=exited | xargs docker rm
+  echo "Removing dangling images..."
+  docker images --quiet --filter=dangling=true | xargs docker rmi
+}

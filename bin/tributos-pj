@@ -1,0 +1,29 @@
+#! /Users/willian/.asdf/shims/ruby
+
+def calc(salary, fee)
+  (salary * (fee / 100.0)).ceil(2)
+end
+
+def format_currency(value)
+  value_str = value.to_s
+  digits = value_str.split(/\./)[0]
+  dec = value_str.split(/\./)[1]
+  digits = digits.reverse.scan(/\d{1,3}/).join('.').reverse
+  "#{digits},#{dec}"
+end
+
+salario = ARGV[0].to_f
+federal = format_currency(calc(salario, 10.97))
+municipal = format_currency(calc(salario, 0))
+company = ARGV[1] == 'toptal' ? 'TOPTAL' : 'Strategic Alternative Funds Group'
+description_aux = ARGV[1] == 'toptal' ? ' clientes da' : nil
+
+result = <<-EODESC
+- Desenvolvimento de software por encomenda para#{description_aux} #{company} LLC.
+
+* Valor aproximado dos Tributos Federais R$ #{federal} (10,97%) e dos Tributos Municipais R$ #{municipal} (0%). Fonte: IBPT e Fecomercio.
+EODESC
+
+IO.popen('pbcopy', 'w') { |f| f << result }
+
+puts result
