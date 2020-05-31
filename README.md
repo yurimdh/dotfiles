@@ -135,7 +135,7 @@ zhuangtongfa.material-theme
   "prettier.trailingComma": "all",
   "prettier.useTabs": false,
   "ruby.format": "rubocop",
-  "ruby.interpreter.commandPath": "/Users/yuri/.asdf/shims/ruby",
+  "ruby.interpreter.commandPath": "/Users/yurisantos/.asdf/shims/ruby",
   "ruby.lint": {
     "rubocop": true
   },
