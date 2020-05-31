@@ -26,6 +26,7 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 alias mux='tmuxinator'
+alias download-latest-dump='aws s3 cp s3://qa-env-pg-backups/latest-dump.tar.gz dump.tar.gz'
 
 # Heroku staging
 alias staging-console='heroku run console --remote staging'
