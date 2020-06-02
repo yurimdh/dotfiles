@@ -11,3 +11,7 @@ rubocop-performance
 ruby-debug-ide
 solargraph
 tmuxinator
+ruby-debug-ide
+rcodetools
+debase
+rubocop-airbnb 3.0.1

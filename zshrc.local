@@ -1,3 +1,5 @@
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
 [[ -f ~/.zsh.local/export ]] && source ~/.zsh.local/export
 [[ -f ~/.zsh.local/functions ]] && source ~/.zsh.local/functions
 [[ -f ~/.zsh.local/inputrc ]] && source ~/.zsh.local/inputrc
